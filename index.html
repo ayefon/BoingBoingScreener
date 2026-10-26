@@ -80,15 +80,40 @@
 <body>
     <div class="container">
         <header>
-            <img class="icon" src="icon.png" alt="">
+            <img class="icon" src="icon.png" alt="Boing Boing Screener app icon">
             <h1>Boing Boing Screener</h1>
-            <p class="tagline">For iPhone, iPad and Mac</p>
+            <p class="tagline">A 2-day RSI pullback screener for iPhone, iPad, and Mac</p>
         </header>
+
         <div class="card">
-            <h2>Coming soon</h2>
-            <p>Boing Boing Screener screens stock universes with a 2-day RSI setup and shows example long calls and long puts found in the option chain data, with supply and demand zones on its charts. It only reads market data, with your own Tradier account.</p>
-            <p>Support and privacy pages for the app will be here soon.</p>
+            <h2>What It Does</h2>
+            <p>Boing Boing Screener looks for <strong>short-term pullbacks inside a trend</strong>: a stock that has been rising, dips sharply for a day or two, and may bounce back (the &ldquo;boing&rdquo;), or the mirror image, a falling stock that pops up for a day or two and may drop again.</p>
+            <p>Each scan checks the stocks in your universes against a fixed set of rules on the daily chart (a 2-day RSI below 30 or above 70, the 50-day average and a 3-week line on the trend&rsquo;s side) and lists the ones that fit, as bullish candidates shown with long calls and bearish candidates shown with long puts, each with example options found in the option chain data. It makes no predictions or recommendations.</p>
         </div>
+
+        <div class="card">
+            <h2>Features</h2>
+            <p>Bullish, bearish, or both &bull; Adjustable price bands and a liquidity test on the at-the-money option&rsquo;s bid/ask spread &bull; Example options with a delta of 0.35 to 0.45 in the first expiration at least 28 days out, with bid, ask, spread, open interest and maximum loss per contract &bull; An IV gauge: the option market&rsquo;s 30-day implied volatility against the stock&rsquo;s own past-year range &bull; Daily and weekly candlestick charts with a 2-day RSI pane, the 50-day average, the 3-week line, a strike line you can step through, and supply and demand zones, scrolling back up to two years &bull; The nearest supply and demand zones above and below the price &bull; Look up any symbol against the same rules &bull; Copy the candidates&rsquo; tickers, or share them as watchlist files or a spreadsheet of the scan&rsquo;s figures &bull; A note when a scan runs outside market hours &bull; Saved settings sets &bull; Editable universes, starting with the S&amp;P 500, Nasdaq-100, Dow 30, S&amp;P 400 and 600, and sector ETFs, plus your own lists &bull; Bookmarks &bull; Sample data to try the app without an account</p>
+        </div>
+
+        <div class="card">
+            <h2>Requirements</h2>
+            <p>iPhone or iPad running iOS 26 or later, or a Mac running macOS 26 or later. Live market data needs your own Tradier API token (a free sandbox token works, with delayed data).</p>
+        </div>
+
+        <div class="card">
+            <h2>Read-Only by Design</h2>
+            <p>The app only reads market data. It never places orders, reads account balances or positions, or moves money. Candidates and the options shown with them are examples found in the market data, not recommendations. Boing Boing Screener is an analysis tool, not investment advice.</p>
+        </div>
+
+        <div class="links">
+            <a href="support.html" class="primary">Support</a>
+            <a href="privacy.html" class="secondary-link">Privacy</a>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Don Babcock. All rights reserved.</p>
+        </footer>
     </div>
 </body>
 </html>
