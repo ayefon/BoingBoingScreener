@@ -99,6 +99,7 @@
             <ul>
                 <li>iPhone or iPad running iOS 26 or later, or a Mac running macOS 26 or later</li>
                 <li>A Tradier API token for live market data (a free sandbox token gives delayed data, which is fine for this daily screen; a production token comes with a Tradier brokerage account)</li>
+                <li>Optional: a free Alpha Vantage API key for next-earnings dates</li>
             </ul>
         </div>
 
@@ -112,6 +113,8 @@
             <p>Tap <strong>Scan</strong>. Candidates appear as they&rsquo;re found: bullish ones with long calls, bearish ones with long puts. Tap one for its chart, 2-day RSI, IV gauge and example options. Stocks that fit the chart rules but not the option checks are listed below the candidates, with the reason.</p>
             <h3>4. Not ready for a token yet?</h3>
             <p>Tap <strong>Try with Sample Data</strong> on the start screen (or in Settings &rarr; Tradier) to explore the whole app with made-up prices.</p>
+            <h3>5. Earnings dates (optional)</h3>
+            <p>Get a free key from Alpha Vantage and add it in <strong>Settings &rarr; Alpha Vantage</strong>. Each candidate then shows its next earnings date, in orange when the company reports on or before the option expires.</p>
         </div>
 
         <div class="card">
@@ -129,11 +132,17 @@
             <h3>A symbol never appears</h3>
             <p>Share-class tickers use a slash for Tradier (for example BRK/B for BRK.B). Check the symbol&rsquo;s Tradier form in <strong>Settings &rarr; Universes &rarr; Manage Universes</strong>. Very new or thinly traded stocks may have no options 28 or more days out. To check any symbol against the rules, type it in the <strong>Look up symbols</strong> field at the top of the list.</p>
 
+            <h3>Earnings dates are blank</h3>
+            <p>Add an Alpha Vantage key in Settings. The free tier allows a limited number of requests per day, so dates can also be blank after many scans in one day; the scan&rsquo;s header says so. Blank can also mean no report is scheduled in the next three months.</p>
+
             <h3>The RSI doesn&rsquo;t match my charting app</h3>
             <p>The app uses TradingView&rsquo;s 2-day RSI (Wilder&rsquo;s smoothing) on Tradier&rsquo;s daily closes. Charts that adjust past prices for dividends can show slightly different values.</p>
 
             <h3>What is the IV gauge?</h3>
             <p>It shows where the option market&rsquo;s 30-day implied volatility sits compared with how much the stock has actually moved over the past year, as a section from 1 to 5 and a rank. A scan&rsquo;s candidates all read below the top section. The gauge needs options around 30 days out and about 14 months of prices, so recently listed stocks have none yet.</p>
+
+            <h3>What&rsquo;s the pane of bars under the chart?</h3>
+            <p>Each candle&rsquo;s <strong>volume</strong>, in its candle&rsquo;s color. A candle still in progress when the prices were fetched (today&rsquo;s, during the session) is hatched and read &ldquo;so far&rdquo;. The <strong>Volume</strong> switch beside Weak Zones, or <strong>Settings &rarr; Charts &rarr; Show Volume</strong>, hides or shows it for every symbol. Settings sets save the choice.</p>
 
             <h3>A zone I expected isn&rsquo;t on the chart</h3>
             <p>The chart shows only zones price hasn&rsquo;t closed through, found back as far as <strong>Settings &rarr; Charts &rarr; Zone Search</strong> reaches (a year unless you change it, up to two). Drag the strip under the chart to scroll back, drag the prices at the left to look above or below, or check the <strong>Nearest supply</strong> and <strong>Nearest demand</strong> lines under the chart.</p>
@@ -148,7 +157,7 @@
             <p>Use <strong>Restore Default Screen</strong> in <strong>Settings &rarr; Screen</strong>. There&rsquo;s no need to delete the app. A saved settings set keeps the values it was saved with until you update it.</p>
 
             <h3>What&rsquo;s kept if I delete the app?</h3>
-            <p>On an <strong>iPhone or iPad</strong>, deleting the app erases everything it saved on that device: your universes and your edits to them, settings sets, bookmarks, and every setting. A reinstall starts from the defaults with the preloaded universes. Your <strong>Tradier token is kept</strong> in the Keychain and usually comes back after reinstalling; tap <strong>Remove</strong> in <strong>Settings &rarr; Tradier</strong> first if you don&rsquo;t want that. On the <strong>Mac</strong>, deleting the app keeps everything, settings included.</p>
+            <p>On an <strong>iPhone or iPad</strong>, deleting the app erases everything it saved on that device: your universes and your edits to them, settings sets, bookmarks, and every setting. A reinstall starts from the defaults with the preloaded universes. Your <strong>Tradier token and Alpha Vantage key are kept</strong> in the Keychain and usually come back after reinstalling; tap <strong>Remove</strong> in <strong>Settings &rarr; Tradier</strong> and <strong>Settings &rarr; Alpha Vantage</strong> first if you don&rsquo;t want that. On the <strong>Mac</strong>, deleting the app keeps everything, settings included.</p>
 
             <h3>Does the app place trades?</h3>
             <p>No. Boing Boing Screener only reads market data. It never places orders, reads account balances or positions, or moves money.</p>
